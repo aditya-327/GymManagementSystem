@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e5c1692-ede5-4bcb-9ab9-f2dc3e67c8a9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="date1" class="java.util.Date"/>
+	<parameter name="date2" class="java.util.Date"/>
+	<queryString language="SQL">
+		<![CDATA[select * from membershipmaster where Doj between $P{date1} and $P{date2}]]>
+	</queryString>
+	<field name="memberid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="membername" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Doj" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="weight" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="height" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PackageId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ContactNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="validity" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="225" y="37" width="100" height="20" uuid="b5eefb6c-d0f2-4817-9e22-d4385e82f026"/>
+				<text><![CDATA[Membership Report ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="56" height="20" uuid="cdc9d413-cf24-4b95-b932-a8f632fe05ae"/>
+				<text><![CDATA[Member ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="0" width="83" height="20" uuid="311d2430-285a-425d-a8f7-61b3dc409a3b"/>
+				<text><![CDATA[Member Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="43" height="20" uuid="02d46da5-3818-4c4f-9277-4f59d9f0e4d8"/>
+				<text><![CDATA[DOJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="43" height="20" uuid="1b31c8b0-ae6b-4f41-9b88-a2a1ed01e861"/>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="0" width="43" height="20" uuid="dab74ada-54c8-4931-813f-0b716040e3cd"/>
+				<text><![CDATA[Weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="54" height="20" uuid="965a5826-3a9d-4b8b-ae3a-5c6da5347f1a"/>
+				<text><![CDATA[PackageId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="57" height="20" uuid="b8d5ac6e-5e49-4e09-84cd-ae2361d90862"/>
+				<text><![CDATA[Mobile No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="87" height="20" uuid="b35c8f46-9050-47bb-818f-e84bdba25ca9"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="0" width="100" height="20" uuid="9089eb44-4510-4b61-b945-0894ae0e2fcb"/>
+				<text><![CDATA[Validity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="56" height="20" uuid="6c35b5b2-c33c-46b3-903e-a65183836d20"/>
+				<textFieldExpression><![CDATA[$F{memberid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="83" height="20" uuid="838225c3-2095-42ab-86c5-f3821b1e39d1"/>
+				<textFieldExpression><![CDATA[$F{membername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="43" height="20" uuid="9f52691d-e4a0-4d48-9864-153ad3fad350"/>
+				<textFieldExpression><![CDATA[$F{Doj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="0" width="43" height="20" uuid="8ec2c973-0486-45a9-884d-d173ee5f033e"/>
+				<textFieldExpression><![CDATA[$F{Dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="0" width="43" height="20" uuid="54765e6e-04cf-4759-93b0-9c78a513f040"/>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="54" height="20" uuid="b4c90edd-aff0-4bdc-ad1f-9c8f893cfa0b"/>
+				<textFieldExpression><![CDATA[$F{PackageId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="57" height="20" uuid="4a1d9ec2-65d5-4caf-9577-c7d58cb2ea5e"/>
+				<textFieldExpression><![CDATA[$F{ContactNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="87" height="20" uuid="97c2f43f-2c5a-4771-ad58-437d25c525bc"/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="508" y="0" width="100" height="20" uuid="9bacd657-0ef8-4196-bde0-29a8ed3798ab"/>
+				<textFieldExpression><![CDATA[$F{validity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45ba0e6d-8d74-43bc-b4a4-19901f673f95">
+	<parameter name="packid" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from packagemaster ]]>
+	</queryString>
+	<field name="PackageID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PackageName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PackageDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PackagePrice" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Duration" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="238" y="33" width="100" height="20" uuid="fb5f7a76-1e89-4dda-af15-939675588ed4"/>
+				<text><![CDATA[Package Report ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="51147f2c-1a40-4645-91a1-5c436c036743"/>
+				<text><![CDATA[PackageID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="fce24f7e-a125-47f5-a0eb-b973b090b4d3"/>
+				<text><![CDATA[PackageName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="4af5afbd-c22c-4010-b0a3-35e12a842f67"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="e7d04a25-fbca-47da-afa0-7ab9cb36c601"/>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="3b726382-b311-4caf-9907-d3fdd33fba50"/>
+				<text><![CDATA[Duration]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5bc05ca5-6dc2-435d-9e9c-5c4c1151ece5"/>
+				<textFieldExpression><![CDATA[$F{PackageID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="e8544210-846b-4bfa-a582-144c02c46228"/>
+				<textFieldExpression><![CDATA[$F{PackageName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="483e9ac6-8d13-4f9d-ad58-5b63033d8f2b"/>
+				<textFieldExpression><![CDATA[$F{PackageDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="b8b99548-fcaa-497d-8966-b677b9f7a2de"/>
+				<textFieldExpression><![CDATA[$F{PackagePrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="2e35617e-5467-40df-9634-7fab32286ced"/>
+				<textFieldExpression><![CDATA[$F{Duration}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
