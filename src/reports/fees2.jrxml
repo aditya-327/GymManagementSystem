@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="date1" class="java.util.Date"/>
+	<parameter name="date2" class="java.util.Date"/>
+	<queryString language="SQL">
+		<![CDATA[select * from feesmaster where FeesDate between $P{date1} and $P{date2}]]>
+	</queryString>
+	<field name="FeeID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FeesDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="memberid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DueAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="netamount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modeofpayment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="234" y="37" width="100" height="20" />
+				<text><![CDATA[Fees Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="39" height="20" />
+				<text><![CDATA[FeeID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="100" height="20" />
+				<text><![CDATA[FeesDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="59" height="20" />
+				<text><![CDATA[Member ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="0" width="76" height="20" />
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="0" width="74" height="20" />
+				<text><![CDATA[Paid Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="100" height="20" />
+				<text><![CDATA[Remaining Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="100" height="20" />
+				<text><![CDATA[Payment Method]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="39" height="20" />
+				<textFieldExpression><![CDATA[$F{FeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="0" width="100" height="20" />
+				<textFieldExpression><![CDATA[$F{FeesDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="59" height="20" />
+				<textFieldExpression><![CDATA[$F{memberid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="76" height="20" />
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="74" height="20" />
+				<textFieldExpression><![CDATA[$F{DueAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="100" height="20" />
+				<textFieldExpression><![CDATA[$F{netamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="100" height="20" />
+				<textFieldExpression><![CDATA[$F{modeofpayment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
